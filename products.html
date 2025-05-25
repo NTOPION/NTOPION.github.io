@@ -6,12 +6,10 @@
   <title>Products | NTOPION</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  
- 
 </head>
 <body>
 
-<!-- Navbar -->
+
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
   <div class="container">
     <a class="navbar-brand font-weight-bold text-uppercase" href="index.html">NTOPION</a>
@@ -30,92 +28,99 @@
   </div>
 </nav>
 
-<!-- Products Section -->
 <section class="container mt-5 pt-5">
   <h1 class="text-center mb-4">Our Products</h1>
   <div class="row">
 
-    <!-- Product 1 -->
+    
     <div class="col-md-4 mb-4">
       <div class="card shadow h-100">
         <img src="rakiNTOPION.png" class="card-img-top" alt="Cretan Raki" />
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">Cretan Raki</h5>
           <p class="card-text">Smooth, strong, and authentic. Distilled using traditional methods from sun-dried grapes.</p>
-          <p><strong>€12.00</strong></p>
+          <p>
+            <select class="product-size">
+              <option value="500ml" data-price="12">500ml - €12.00</option>
+              <option value="1000ml" data-price="20">1000ml - €20.00</option>
+            </select>
+          </p>
           <div class="mt-auto">
-           
-            <button class="add-to-cart" data-name="Raki" data-price="12">Add to Cart</button>
-            <div class="cart-container">
-    </div>
-  
-
-  
- 
+            <button class="add-to-cart" data-name="Raki">Add to Cart</button>
+            <div class="cart-container"></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Product 2 -->
+  
     <div class="col-md-4 mb-4">
       <div class="card shadow h-100">
         <img src="tsipouroNTOPION.png" class="card-img-top" alt="Tsipouro" />
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">Tsipouro</h5>
           <p class="card-text">Double distilled, with or without anise. Bold flavor with a touch of tradition.</p>
-          <p><strong>€20.00</strong></p>
+          <p>
+            <select class="product-size">
+              <option value="500ml" data-price="15">500ml - €15.00</option>
+              <option value="1000ml" data-price="25">1000ml - €25.00</option>
+            </select>
+          </p>
           <div class="mt-auto">
-         <button class="add-to-cart" data-name="Tsipouro" data-price="20">Add to Cart</button>
-
+            <button class="add-to-cart" data-name="Tsipouro">Add to Cart</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Product 3 -->
+    
     <div class="col-md-4 mb-4">
       <div class="card shadow h-100">
         <img src="liquerNTOPION.png" class="card-img-top" alt="Fruit Liqueur" />
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">Fruit Liqueur</h5>
           <p class="card-text">Sweet and aromatic. Made with local herbs, honey, and seasonal fruits.</p>
-          <p><strong>€15.00</strong></p>
+          <p>
+            <select class="product-size">
+              <option value="500ml" data-price="10">500ml - €10.00</option>
+              <option value="1000ml" data-price="18">1000ml - €18.00</option>
+            </select>
+          </p>
           <div class="mt-auto">
-         <button class="add-to-cart" data-name="liquer" data-price="15">Add to Cart</button>
-
+            <button class="add-to-cart" data-name="Fruit Liqueur">Add to Cart</button>
           </div>
         </div>
       </div>
     </div>
-    
 
   </div>
 </section>
-<button id="cartButton">View Cart</button>
- <div id="cartPopup" class="popup hidden">
-    <div class="popup-content">
-      <span id="closePopup" class="close">&times;</span>
-      
-      <h1>Your Cart</h1>
-  <div class="cart">
-    <ul id="cart-items"></ul>
-    <p>Total: $<span id="total-price">0</span></p>
-  </div>
-      <button>Checkout</button>
-    </div>
-  </div>
 
-<!-- Footer -->
+<button id="cartButton">View Cart</button>
+<div id="cartPopup" class="popup hidden">
+  <div class="popup-content">
+    <span id="closePopup" class="close">&times;</span>
+    <h1>Your Cart</h1>
+    <div class="cart">
+      <ul id="cart-items"></ul>
+      <p>Total: €<span id="total-price">0.00</span></p>
+    </div>
+    <button>Checkout</button>
+  </div>
+</div>
+
+
 <footer class="footer text-center py-3 mt-5">
   <p class="mb-0">&copy; 2025 NTOPION. All rights reserved.</p>
 </footer>
 
-<!-- Scripts -->
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  <script src="script3.js"></script>
  <script src="script4.js"></script>
+ 
+
 </body>
 </html>

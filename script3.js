@@ -1,43 +1,63 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const cartItems = document.getElementById("cart-items");
-  const totalPrice = document.getElementById("total-price");
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  function updateCartDisplay() {
-    cartItems.innerHTML = "";
+  function renderCart() {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartList = document.getElementById('cart-items');
+    const totalPriceElement = document.getElementById('total-price');
+
+    cartList.innerHTML = '';
     let total = 0;
 
-    cart.forEach((item, index) => {
-      total += item.price;
-
-      const listItem = document.createElement("li");
-      listItem.innerHTML = `
+    cartItems.forEach((item, index) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
         ${item.name} - €${item.price.toFixed(2)}
-        <button class="remove-btn" onclick="removeFromCart(${index})">✖</button>
+        <button class="remove-item" data-index="${index}" style="margin-left: 10px;">❌</button>
       `;
-      cartItems.appendChild(listItem);
+      cartList.appendChild(li);
+      total += item.price;
     });
 
-    totalPrice.textContent = total.toFixed(2);
-    localStorage.setItem("cart", JSON.stringify(cart));
+    totalPriceElement.textContent = total.toFixed(2);
+
+    // Set up remove handlers
+    document.querySelectorAll('.remove-item').forEach(button => {
+      button.addEventListener('click', function () {
+        const index = this.getAttribute('data-index');
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.splice(index, 1); // Remove item by index
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCart(); // Refresh cart display
+      });
+    });
   }
 
-  window.removeFromCart = (index) => {
-    cart.splice(index, 1);
-    updateCartDisplay();
-  };
+  // Add to cart
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function () {
+      alert('Item added to cart')
+      const product = this.getAttribute('data-name');
+      const select = this.closest('.card-body').querySelector('.product-size');
+      const size = select.value;
+      const price = parseFloat(select.options[select.selectedIndex].dataset.price);
+      const name = `${product} (${size})`;
 
-  document.querySelectorAll(".add-to-cart").forEach(button => {
-    button.addEventListener("click", () => {
-      cart.push({
-        name: button.getAttribute("data-name"),
-        price: parseFloat(button.getAttribute("data-price"))
-      });
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ name, price });
+      localStorage.setItem('cart', JSON.stringify(cart));
 
-      alert("Item Added to Cart");
-      updateCartDisplay();
+      renderCart();
     });
   });
 
-  updateCartDisplay();
-});
+  // Load on page load
+  window.addEventListener('load', renderCart);
+
+  // Cart popup toggle
+  document.getElementById('cartButton').addEventListener('click', () => {
+    document.getElementById('cartPopup').classList.toggle('hidden');
+  });
+
+  document.getElementById('closePopup').addEventListener('click', () => {
+    document.getElementById('cartPopup').classList.add('hidden');
+  });
+

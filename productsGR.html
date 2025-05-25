@@ -9,7 +9,6 @@
 </head>
 <body>
 
-<!-- Μενού Πλοήγησης -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
   <div class="container">
     <a class="navbar-brand font-weight-bold text-uppercase" href="index.html">NTOPION</a>
@@ -28,52 +27,66 @@
   </div>
 </nav>
 
-<!-- Ενότητα Προϊόντων -->
 <section class="container mt-5 pt-5">
   <h1 class="text-center mb-4">Τα Προϊόντα μας</h1>
   <div class="row">
 
-    <!-- Προϊόν 1 -->
+
     <div class="col-md-4 mb-4">
       <div class="card shadow h-100">
         <img src="rakiNTOPION.png" class="card-img-top" alt="Κρητική Ρακή" />
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">Κρητική Ρακή</h5>
-          <p class="card-text">Απαλή, δυνατή και αυθεντική. Αποσταγμένη με παραδοσιακές μεθόδους από λιασμένα σταφύλια.</p>
-          <p><strong>€12.00</strong></p>
+          <p class="card-text">Απαλή, δυνατή και αυθεντική. Αποσταγμένη με παραδοσιακές μεθόδους από λιαστά σταφύλια.</p>
+          <p>
+            <select class="product-size">
+              <option value="500ml" data-price="12">500ml - €12.00</option>
+              <option value="1000ml" data-price="20">1000ml - €20.00</option>
+            </select>
+          </p>
           <div class="mt-auto">
-            <button class="add-to-cart" data-name="Ρακή" data-price="12">Προσθήκη στο Καλάθι</button>
+            <button class="add-to-cart" data-name="Ρακή">Προσθήκη στο Καλάθι</button>
             <div class="cart-container"></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Προϊόν 2 -->
+   
     <div class="col-md-4 mb-4">
       <div class="card shadow h-100">
         <img src="tsipouroNTOPION.png" class="card-img-top" alt="Τσίπουρο" />
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">Τσίπουρο</h5>
-          <p class="card-text">Διπλής απόσταξης, με ή χωρίς γλυκάνισο. Έντονη γεύση με παραδοσιακή υπογραφή.</p>
-          <p><strong>€20.00</strong></p>
+          <p class="card-text">Διπλής απόσταξης, με ή χωρίς γλυκάνισο. Δυνατή γεύση με άγγιγμα παράδοσης.</p>
+          <p>
+            <select class="product-size">
+              <option value="500ml" data-price="15">500ml - €15.00</option>
+              <option value="1000ml" data-price="25">1000ml - €25.00</option>
+            </select>
+          </p>
           <div class="mt-auto">
-            <button class="add-to-cart" data-name="Τσίπουρο" data-price="20">Προσθήκη στο Καλάθι</button>
+            <button class="add-to-cart" data-name="Τσίπουρο">Προσθήκη στο Καλάθι</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Προϊόν 3 -->
+   
     <div class="col-md-4 mb-4">
       <div class="card shadow h-100">
         <img src="liquerNTOPION.png" class="card-img-top" alt="Λικέρ Φρούτων" />
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">Λικέρ Φρούτων</h5>
           <p class="card-text">Γλυκό και αρωματικό. Φτιαγμένο με τοπικά βότανα, μέλι και εποχιακά φρούτα.</p>
-          <p><strong>€15.00</strong></p>
+          <p>
+            <select class="product-size">
+              <option value="500ml" data-price="10">500ml - €10.00</option>
+              <option value="1000ml" data-price="18">1000ml - €18.00</option>
+            </select>
+          </p>
           <div class="mt-auto">
-            <button class="add-to-cart" data-name="Λικέρ" data-price="15">Προσθήκη στο Καλάθι</button>
+            <button class="add-to-cart" data-name="Λικέρ Φρούτων">Προσθήκη στο Καλάθι</button>
           </div>
         </div>
       </div>
@@ -82,28 +95,23 @@
   </div>
 </section>
 
-<!-- Κουμπί Καλαθιού -->
 <button id="cartButton">Προβολή Καλαθιού</button>
-
-<!-- Αναδυόμενο Παράθυρο Καλαθιού -->
 <div id="cartPopup" class="popup hidden">
   <div class="popup-content">
     <span id="closePopup" class="close">&times;</span>
     <h1>Το Καλάθι σας</h1>
     <div class="cart">
       <ul id="cart-items"></ul>
-      <p>Σύνολο: €<span id="total-price">0</span></p>
+      <p>Σύνολο: €<span id="total-price">0.00</span></p>
     </div>
     <button>Ολοκλήρωση Αγοράς</button>
   </div>
 </div>
 
-<!-- Υποσέλιδο -->
 <footer class="footer text-center py-3 mt-5">
-  <p class="mb-0">&copy; 2025 NTOPION. Όλα τα δικαιώματα διατηρούνται.</p>
+  <p class="mb-0">&copy; 2025 NTOPION. Με επιφύλαξη παντός δικαιώματος.</p>
 </footer>
 
-<!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
