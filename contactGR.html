@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Επικοινωνία</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        body {
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand font-weight-bold text-uppercase" href="index.html">NTOPION</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="INDEXGR.HTML">Αρχική</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutGR.html">Σχετικά</a></li>
+            <li class="nav-item"><a class="nav-link" href="productsGR.html">Προϊόντα</a></li>
+            <li class="nav-item active"><a class="nav-link" href="contactGR.html">Επικοινωνία</a></li>
+          </ul>
+          <a href="contact.html" class="language-switch text-white ml-3">EN</a>
+        </div>
+      </div>
+   </nav>
+
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+   <body class="bg-light">
+   <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="contact-wrapper">
+            <div class="row g-0">
+              <div class="col-md-5">
+                <div class="contact-info h-100">
+                  <h3 class="mb-4">Επικοινωνήστε μαζί μας</h3>
+                  <p class="mb-4">Θα χαρούμε να σας ακούσουμε. Συμπληρώστε τη φόρμα ή επικοινωνήστε μαζί μας χρησιμοποιώντας τα παρακάτω στοιχεία.</p>
+
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Τοποθεσία</h6>
+                      <p class="mb-0">Ηράκλειο, Κρήτη</p>
+                    </div>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Τηλέφωνο</h6>
+                      <p class="mb-0">+30 2810 123 456</p>
+                    </div>
+                  </div>
+
+                  <div class="contact-item">
+                    <div class="contact-icon">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-0">Email</h6>
+                      <p class="mb-0">ntopioncorp@gmail.com</p>
+                    </div>
+                  </div>
+
+                  <div class="social-links">
+                    <h6 class="mb-3">Ακολουθήστε μας</h6>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-7">
+                <div class="contact-form">
+                  <h3 class="mb-4">Στείλτε μας μήνυμα</h3>
+                  <form>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">Όνομα</label>
+                        <input type="text" class="form-control" placeholder="Γιάννης">
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">Επώνυμο</label>
+                        <input type="text" class="form-control" placeholder="Παπαδόπουλος">
+                      </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label class="form-label">Email</label>
+                      <input type="email" class="form-control" placeholder="giannis@example.com">
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label class="form-label">Θέμα</label>
+                      <input type="text" class="form-control" placeholder="Πώς μπορούμε να βοηθήσουμε;">
+                    </div>
+                    
+                    <div class="mb-4">
+                      <label class="form-label">Μήνυμα</label>
+                      <textarea class="form-control" rows="5" placeholder="Το μήνυμά σας..."></textarea>
+                    </div>
+                    
+                    <button onclick="myFunction()">Αποστολή</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+   <footer class="footer">
+      <div class="footerContainer">
+          <p>Όλα τα δικαιώματα διατηρούνται &#xA9; 2025 NTOPION.</p>
+      </div>
+   </footer>
+
+   <script>
+   function myFunction() {
+     alert("Το μήνυμα στάλθηκε");
+   }
+   </script>
+</body>
+</html>
