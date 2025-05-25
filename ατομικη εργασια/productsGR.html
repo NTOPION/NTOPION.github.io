@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Προϊόντα | NTOPION</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+
+<!-- Μενού Πλοήγησης -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand font-weight-bold text-uppercase" href="index.html">NTOPION</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="INDEXGR.HTML">Αρχική</a></li>
+        <li class="nav-item"><a class="nav-link" href="aboutGR.html">Σχετικά</a></li>
+        <li class="nav-item active"><a class="nav-link" href="productsGR.html">Προϊόντα</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Επικοινωνία</a></li>
+      </ul>
+      <a href="products.html" class="language-switch text-white ml-3">EN</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Ενότητα Προϊόντων -->
+<section class="container mt-5 pt-5">
+  <h1 class="text-center mb-4">Τα Προϊόντα μας</h1>
+  <div class="row">
+
+    <!-- Προϊόν 1 -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow h-100">
+        <img src="rakiNTOPION.png" class="card-img-top" alt="Κρητική Ρακή" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Κρητική Ρακή</h5>
+          <p class="card-text">Απαλή, δυνατή και αυθεντική. Αποσταγμένη με παραδοσιακές μεθόδους από λιασμένα σταφύλια.</p>
+          <p><strong>€12.00</strong></p>
+          <div class="mt-auto">
+            <button class="add-to-cart" data-name="Ρακή" data-price="12">Προσθήκη στο Καλάθι</button>
+            <div class="cart-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Προϊόν 2 -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow h-100">
+        <img src="tsipouroNTOPION.png" class="card-img-top" alt="Τσίπουρο" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Τσίπουρο</h5>
+          <p class="card-text">Διπλής απόσταξης, με ή χωρίς γλυκάνισο. Έντονη γεύση με παραδοσιακή υπογραφή.</p>
+          <p><strong>€20.00</strong></p>
+          <div class="mt-auto">
+            <button class="add-to-cart" data-name="Τσίπουρο" data-price="20">Προσθήκη στο Καλάθι</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Προϊόν 3 -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow h-100">
+        <img src="liquerNTOPION.png" class="card-img-top" alt="Λικέρ Φρούτων" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Λικέρ Φρούτων</h5>
+          <p class="card-text">Γλυκό και αρωματικό. Φτιαγμένο με τοπικά βότανα, μέλι και εποχιακά φρούτα.</p>
+          <p><strong>€15.00</strong></p>
+          <div class="mt-auto">
+            <button class="add-to-cart" data-name="Λικέρ" data-price="15">Προσθήκη στο Καλάθι</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Κουμπί Καλαθιού -->
+<button id="cartButton">Προβολή Καλαθιού</button>
+
+<!-- Αναδυόμενο Παράθυρο Καλαθιού -->
+<div id="cartPopup" class="popup hidden">
+  <div class="popup-content">
+    <span id="closePopup" class="close">&times;</span>
+    <h1>Το Καλάθι σας</h1>
+    <div class="cart">
+      <ul id="cart-items"></ul>
+      <p>Σύνολο: €<span id="total-price">0</span></p>
+    </div>
+    <button>Ολοκλήρωση Αγοράς</button>
+  </div>
+</div>
+
+<!-- Υποσέλιδο -->
+<footer class="footer text-center py-3 mt-5">
+  <p class="mb-0">&copy; 2025 NTOPION. Όλα τα δικαιώματα διατηρούνται.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script3.js"></script>
+<script src="script4.js"></script>
+
+</body>
+</html>
