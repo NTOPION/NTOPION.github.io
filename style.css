@@ -361,10 +361,12 @@ button:hover,
 
 /* ========== Κάρτες ========== */
 .card {
+
   height: 100%;
 }
 
 .card-body {
+  background-color: #dea730a2;
   display: flex;
   flex-direction: column;
 }
